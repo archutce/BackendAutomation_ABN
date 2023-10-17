@@ -1,13 +1,19 @@
 ############### ABN Backend Test Automation Assignment ################
 
+
+Clone the project https://github.com/archutce/BackendAutomation_ABN.git
+Go to the cloned folder path  from command prompt give mvn test
+Or from the IDE run TestRunner.java  under src/test/java with folder cucumber.options
+The actual request and response calls are logged in logs.txt file at the project level
+
 -----------Used cucumber BDD framework to execute automate Issue's API functionality---------------------------------------------------------
 
 Below is overview of framework created
 
 
 1. Created a cucumber junit TestRunner.java  under src/test/java with folder cucumber.options which runs all the feature files and its corresponding step definitions.
-2. Created a feature file CRUDIssue.feature under src/test/java/features which has two scenarios.
-3. Created a step definition file CRUDStepdefinitions.java under src/test/java/stepDefinitions which has actual implementation.
+2. Created a feature files CRUDIssue.feature under src/test/java/features for CRUD and EdgeCase scenarios
+3. Created a step definition files CRUDStepdefinitions.java under src/test/java/stepDefinitions which has actual implementation for each feature.
 4. Created config.properties under src/test/resources to drive the global variables.
 
 5. Used two approaches for input test data 

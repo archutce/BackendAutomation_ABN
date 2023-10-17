@@ -67,7 +67,7 @@ public class EdgeCaseStepDefinitions extends ResuableTestUtils {
 					.pathParam("issueId",data.inValidIssueId ).auth().oauth2(getGlobalPropertiesValue("accessToken"))
 					.when().delete("/projects/{projectId}/issues/{issueId}").then().spec(responseSpecification())
 					.statusCode(404).extract().response().asString();
-		  log.info("Delete Issue Response with ExpiredAccessToken " + deleteIssueResponse);
+		  log.info("Delete Issue Response with InvalidIssueID " + deleteIssueResponse);
 		  deleteMap = objectMapper.readValue(deleteIssueResponse, HashMap.class);
 		  log.info(deleteMap.get("error"));
 		  log.info(deleteMap.get("error_description"));
@@ -99,7 +99,7 @@ public class EdgeCaseStepDefinitions extends ResuableTestUtils {
 					.when().post("/projects/{projectId}/issues").then().spec(responseSpecification())
 					.statusCode(400).extract().response().asString();
 
-			log.info("create Issue Error Response"+createIssueResponse);
+			log.info("create Issue Error Response without mandatory fields"+createIssueResponse);
 			js = ResuableTestUtils.rawToJson(createIssueResponse);
 			assertEquals(data.errorValue,js.getString("error"));
 			
@@ -115,7 +115,7 @@ public class EdgeCaseStepDefinitions extends ResuableTestUtils {
 					.when().put("/projects/{projectId}/issues/{issueId}").then().spec(responseSpecification())
 					.statusCode(400).extract().response().asString();
 	    	
-	    	log.info("edit Issue Error Response"+editIssueResponse);
+	    	log.info("edit Issue Error Response without mandatory fields"+editIssueResponse);
 	    	js=rawToJson(editIssueResponse);
 	    	
 	    	//Convert JSON response as String and get the parameters needed using streams
