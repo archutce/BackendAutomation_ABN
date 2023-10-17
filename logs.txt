@@ -1,18 +1,1225 @@
-Request method:	DELETE
-Request URI:	https://gitlab.com/api/v4/projects/51190657/issues/64
+Request method:	POST
+Request URI:	https://gitlab.com/api/v4/projects/51190657/issues
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
 Path params:	projectId=51190657
-				issueId=64
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "title": "New Issue title 1",
+    "description": "New Issue1 description",
+    "labels": "bug",
+    "assignee_id": "123456",
+    "issue_type": "issue"
+}
+HTTP/1.1 201 Created
+Date: Tue, 17 Oct 2023 16:07:16 GMT
+Content-Type: application/json
+Content-Length: 1550
+Connection: keep-alive
+cache-control: max-age=0, private, must-revalidate
+content-security-policy: default-src 'none'
+etag: W/"d69c2e7f2fae566e9765bab6dd2165d3"
+vary: Origin
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-gitlab-meta: {"correlation_id":"aec793a5588068ba7bf8c59995a54096","version":"1"}
+x-request-id: aec793a5588068ba7bf8c59995a54096
+x-runtime: 0.538693
+strict-transport-security: max-age=31536000
+referrer-policy: strict-origin-when-cross-origin
+ratelimit-observed: 11
+ratelimit-remaining: 1989
+ratelimit-reset: 1697558896
+ratelimit-resettime: Tue, 17 Oct 2023 16:08:16 GMT
+ratelimit-limit: 2000
+gitlab-lb: haproxy-main-03-lb-gprd
+gitlab-sv: localhost
+CF-Cache-Status: DYNAMIC
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=%2FjYNaZxysRzxcf03WIrsDmVMv9gV1ucGbs7qoG%2BSG8FJfuZd58PRGLPhV50YMdTI1DxmttZ7gPBYGM%2BTOkdn9SgJgZPqncDSHirzn5FkBc3D9E78XJ413MYfADw%3D"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Set-Cookie: _cfuvid=5FK8kXFhete2w7kVasgzkjhlSHxF6_NXv6HL58c62eo-1697558836649-0-604800000; path=/; domain=.gitlab.com; HttpOnly; Secure; SameSite=None
+Server: cloudflare
+CF-RAY: 8179cb24fc3f6578-AMS
+
+{
+    "id": 136577670,
+    "iid": 226,
+    "project_id": 51190657,
+    "title": "New Issue title 1",
+    "description": "New Issue1 description",
+    "state": "opened",
+    "created_at": "2023-10-17T16:07:16.385Z",
+    "updated_at": "2023-10-17T16:07:16.385Z",
+    "closed_at": null,
+    "closed_by": null,
+    "labels": [
+        "bug"
+    ],
+    "milestone": null,
+    "assignees": [
+        
+    ],
+    "author": {
+        "id": 18335407,
+        "username": "archutce",
+        "name": "Archana Velu",
+        "state": "active",
+        "locked": false,
+        "avatar_url": "https://secure.gravatar.com/avatar/eccbeaf25ea32864b42569f7cc18837e?s=80&d=identicon",
+        "web_url": "https://gitlab.com/archutce"
+    },
+    "type": "ISSUE",
+    "assignee": null,
+    "user_notes_count": 0,
+    "merge_requests_count": 0,
+    "upvotes": 0,
+    "downvotes": 0,
+    "due_date": null,
+    "confidential": false,
+    "discussion_locked": null,
+    "issue_type": "issue",
+    "web_url": "https://gitlab.com/test3560241/personalproject/-/issues/226",
+    "time_stats": {
+        "time_estimate": 0,
+        "total_time_spent": 0,
+        "human_time_estimate": null,
+        "human_total_time_spent": null
+    },
+    "task_completion_status": {
+        "count": 0,
+        "completed_count": 0
+    },
+    "blocking_issues_count": 0,
+    "has_tasks": true,
+    "task_status": "0 of 0 checklist items completed",
+    "_links": {
+        "self": "https://gitlab.com/api/v4/projects/51190657/issues/226",
+        "notes": "https://gitlab.com/api/v4/projects/51190657/issues/226/notes",
+        "award_emoji": "https://gitlab.com/api/v4/projects/51190657/issues/226/award_emoji",
+        "project": "https://gitlab.com/api/v4/projects/51190657",
+        "closed_as_duplicate_of": null
+    },
+    "references": {
+        "short": "#226",
+        "relative": "#226",
+        "full": "test3560241/personalproject#226"
+    },
+    "severity": "UNKNOWN",
+    "subscribed": true,
+    "moved_to_id": null,
+    "service_desk_reply_to": null
+}
+Request method:	GET
+Request URI:	https://gitlab.com/api/v4/projects/51190657/issues/226
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	projectId=51190657
+				issueId=226
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Tue, 17 Oct 2023 16:07:17 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+cache-control: max-age=0, private, must-revalidate
+content-security-policy: default-src 'none'
+etag: W/"d69c2e7f2fae566e9765bab6dd2165d3"
+vary: Origin, Accept-Encoding
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-gitlab-meta: {"correlation_id":"b1aa083561f35414470a0f29b06f3628","version":"1"}
+x-request-id: b1aa083561f35414470a0f29b06f3628
+x-runtime: 0.148553
+strict-transport-security: max-age=31536000
+referrer-policy: strict-origin-when-cross-origin
+ratelimit-observed: 12
+ratelimit-remaining: 1988
+ratelimit-reset: 1697558897
+ratelimit-resettime: Tue, 17 Oct 2023 16:08:17 GMT
+ratelimit-limit: 2000
+gitlab-lb: haproxy-main-03-lb-gprd
+gitlab-sv: localhost
+CF-Cache-Status: MISS
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=sWChJiPeepDO3crF%2FTxxBJ43IwmRuuiycBu9zwRehqJgH%2FdIXhqmG4MKfPHDA%2F7zf4XmXK6f9jrLegLMZZExKeRZRW3MfNqx%2BO7Sg7Sj42Xl7LO3YnTEdz6n6Tg%3D"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Set-Cookie: _cfuvid=JQH41qT.LGKvxsGhxv309EUwb0dQUV6YE8WWaoZSGcA-1697558837726-0-604800000; path=/; domain=.gitlab.com; HttpOnly; Secure; SameSite=None
+Server: cloudflare
+CF-RAY: 8179cb2e0b8a0a7b-AMS
+Content-Encoding: gzip
+
+{
+    "id": 136577670,
+    "iid": 226,
+    "project_id": 51190657,
+    "title": "New Issue title 1",
+    "description": "New Issue1 description",
+    "state": "opened",
+    "created_at": "2023-10-17T16:07:16.385Z",
+    "updated_at": "2023-10-17T16:07:16.385Z",
+    "closed_at": null,
+    "closed_by": null,
+    "labels": [
+        "bug"
+    ],
+    "milestone": null,
+    "assignees": [
+        
+    ],
+    "author": {
+        "id": 18335407,
+        "username": "archutce",
+        "name": "Archana Velu",
+        "state": "active",
+        "locked": false,
+        "avatar_url": "https://secure.gravatar.com/avatar/eccbeaf25ea32864b42569f7cc18837e?s=80&d=identicon",
+        "web_url": "https://gitlab.com/archutce"
+    },
+    "type": "ISSUE",
+    "assignee": null,
+    "user_notes_count": 0,
+    "merge_requests_count": 0,
+    "upvotes": 0,
+    "downvotes": 0,
+    "due_date": null,
+    "confidential": false,
+    "discussion_locked": null,
+    "issue_type": "issue",
+    "web_url": "https://gitlab.com/test3560241/personalproject/-/issues/226",
+    "time_stats": {
+        "time_estimate": 0,
+        "total_time_spent": 0,
+        "human_time_estimate": null,
+        "human_total_time_spent": null
+    },
+    "task_completion_status": {
+        "count": 0,
+        "completed_count": 0
+    },
+    "blocking_issues_count": 0,
+    "has_tasks": true,
+    "task_status": "0 of 0 checklist items completed",
+    "_links": {
+        "self": "https://gitlab.com/api/v4/projects/51190657/issues/226",
+        "notes": "https://gitlab.com/api/v4/projects/51190657/issues/226/notes",
+        "award_emoji": "https://gitlab.com/api/v4/projects/51190657/issues/226/award_emoji",
+        "project": "https://gitlab.com/api/v4/projects/51190657",
+        "closed_as_duplicate_of": null
+    },
+    "references": {
+        "short": "#226",
+        "relative": "#226",
+        "full": "test3560241/personalproject#226"
+    },
+    "severity": "UNKNOWN",
+    "subscribed": true,
+    "moved_to_id": null,
+    "service_desk_reply_to": null
+}
+Request method:	PUT
+Request URI:	https://gitlab.com/api/v4/projects/51190657/issues/226?add_labels=regression&due_date=2023-11-25
+Proxy:			<none>
+Request params:	<none>
+Query params:	add_labels=regression
+				due_date=2023-11-25
+Form params:	<none>
+Path params:	projectId=51190657
+				issueId=226
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "remove_labels": "bug",
+    "discussion_locked": false,
+    "issue_type": "incident",
+    "title": "updated the title of the created issue",
+    "confidential": true
+}
+HTTP/1.1 200 OK
+Date: Tue, 17 Oct 2023 16:07:19 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+cache-control: max-age=0, private, must-revalidate
+content-security-policy: default-src 'none'
+etag: W/"4282ebf04b0245542af99888b2dcbbac"
+vary: Origin, Accept-Encoding
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-gitlab-meta: {"correlation_id":"422346c381b6219891b10a2f04eeb985","version":"1"}
+x-request-id: 422346c381b6219891b10a2f04eeb985
+x-runtime: 0.896852
+strict-transport-security: max-age=31536000
+referrer-policy: strict-origin-when-cross-origin
+ratelimit-observed: 12
+ratelimit-remaining: 1988
+ratelimit-reset: 1697558899
+ratelimit-resettime: Tue, 17 Oct 2023 16:08:19 GMT
+ratelimit-limit: 2000
+gitlab-lb: haproxy-main-05-lb-gprd
+gitlab-sv: localhost
+CF-Cache-Status: DYNAMIC
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=gw%2BWRUKEAmONhFaXRkC1IY8LeH4oF0bR9IyYnTKtY3GZO1haOr8gmK3sLfAbmcs4%2FGYDnB72sam6kg5OiVWGKwSoxNZjXRcudlxQS%2Fo3eZY8LOmVm1XXKPvQEmw%3D"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Set-Cookie: _cfuvid=WEL1X6pz65QSCw994o9eETdnDp8nIJbX1QpXzzsfZoY-1697558839260-0-604800000; path=/; domain=.gitlab.com; HttpOnly; Secure; SameSite=None
+Server: cloudflare
+CF-RAY: 8179cb32fa170e81-AMS
+Content-Encoding: gzip
+
+{
+    "id": 136577670,
+    "iid": 226,
+    "project_id": 51190657,
+    "title": "updated the title of the created issue",
+    "description": "New Issue1 description",
+    "state": "opened",
+    "created_at": "2023-10-17T16:07:16.385Z",
+    "updated_at": "2023-10-17T16:07:18.665Z",
+    "closed_at": null,
+    "closed_by": null,
+    "labels": [
+        "regression"
+    ],
+    "milestone": null,
+    "assignees": [
+        
+    ],
+    "author": {
+        "id": 18335407,
+        "username": "archutce",
+        "name": "Archana Velu",
+        "state": "active",
+        "locked": false,
+        "avatar_url": "https://secure.gravatar.com/avatar/eccbeaf25ea32864b42569f7cc18837e?s=80&d=identicon",
+        "web_url": "https://gitlab.com/archutce"
+    },
+    "type": "INCIDENT",
+    "assignee": null,
+    "user_notes_count": 0,
+    "merge_requests_count": 0,
+    "upvotes": 0,
+    "downvotes": 0,
+    "due_date": "2023-11-25",
+    "confidential": true,
+    "discussion_locked": false,
+    "issue_type": "incident",
+    "web_url": "https://gitlab.com/test3560241/personalproject/-/issues/226",
+    "time_stats": {
+        "time_estimate": 0,
+        "total_time_spent": 0,
+        "human_time_estimate": null,
+        "human_total_time_spent": null
+    },
+    "task_completion_status": {
+        "count": 0,
+        "completed_count": 0
+    },
+    "blocking_issues_count": 0,
+    "has_tasks": true,
+    "task_status": "0 of 0 checklist items completed",
+    "_links": {
+        "self": "https://gitlab.com/api/v4/projects/51190657/issues/226",
+        "notes": "https://gitlab.com/api/v4/projects/51190657/issues/226/notes",
+        "award_emoji": "https://gitlab.com/api/v4/projects/51190657/issues/226/award_emoji",
+        "project": "https://gitlab.com/api/v4/projects/51190657",
+        "closed_as_duplicate_of": null
+    },
+    "references": {
+        "short": "#226",
+        "relative": "#226",
+        "full": "test3560241/personalproject#226"
+    },
+    "severity": "UNKNOWN",
+    "subscribed": true,
+    "moved_to_id": null,
+    "service_desk_reply_to": null
+}
+Request method:	GET
+Request URI:	https://gitlab.com/api/v4/projects/51190657/issues/226
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	projectId=51190657
+				issueId=226
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Tue, 17 Oct 2023 16:07:19 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+cache-control: max-age=0, private, must-revalidate
+content-security-policy: default-src 'none'
+etag: W/"4282ebf04b0245542af99888b2dcbbac"
+vary: Origin, Accept-Encoding
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-gitlab-meta: {"correlation_id":"387946c0de5ac226c08c84960fb9fb9d","version":"1"}
+x-request-id: 387946c0de5ac226c08c84960fb9fb9d
+x-runtime: 0.183207
+strict-transport-security: max-age=31536000
+referrer-policy: strict-origin-when-cross-origin
+ratelimit-observed: 13
+ratelimit-remaining: 1987
+ratelimit-reset: 1697558899
+ratelimit-resettime: Tue, 17 Oct 2023 16:08:19 GMT
+ratelimit-limit: 2000
+gitlab-lb: haproxy-main-05-lb-gprd
+gitlab-sv: localhost
+CF-Cache-Status: MISS
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=KOdeL1NTLKKZl5%2FvH6AyjarNadJt3go5H5GCCHxl%2FDuR%2FX40nRrJabtJ0xzJsBSbhh7Inb35dK%2FOU1eLXW7KQJJr5GpBbqDghZGQAOT9h7DvrR%2Fiprj8ar2WX6g%3D"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Set-Cookie: _cfuvid=L6TGemKvYoEucckJaU6SuqjGp5YAwOaksQwlJ7ofs5M-1697558839858-0-604800000; path=/; domain=.gitlab.com; HttpOnly; Secure; SameSite=None
+Server: cloudflare
+CF-RAY: 8179cb3b0872b7a3-AMS
+Content-Encoding: gzip
+
+{
+    "id": 136577670,
+    "iid": 226,
+    "project_id": 51190657,
+    "title": "updated the title of the created issue",
+    "description": "New Issue1 description",
+    "state": "opened",
+    "created_at": "2023-10-17T16:07:16.385Z",
+    "updated_at": "2023-10-17T16:07:18.665Z",
+    "closed_at": null,
+    "closed_by": null,
+    "labels": [
+        "regression"
+    ],
+    "milestone": null,
+    "assignees": [
+        
+    ],
+    "author": {
+        "id": 18335407,
+        "username": "archutce",
+        "name": "Archana Velu",
+        "state": "active",
+        "locked": false,
+        "avatar_url": "https://secure.gravatar.com/avatar/eccbeaf25ea32864b42569f7cc18837e?s=80&d=identicon",
+        "web_url": "https://gitlab.com/archutce"
+    },
+    "type": "INCIDENT",
+    "assignee": null,
+    "user_notes_count": 0,
+    "merge_requests_count": 0,
+    "upvotes": 0,
+    "downvotes": 0,
+    "due_date": "2023-11-25",
+    "confidential": true,
+    "discussion_locked": false,
+    "issue_type": "incident",
+    "web_url": "https://gitlab.com/test3560241/personalproject/-/issues/226",
+    "time_stats": {
+        "time_estimate": 0,
+        "total_time_spent": 0,
+        "human_time_estimate": null,
+        "human_total_time_spent": null
+    },
+    "task_completion_status": {
+        "count": 0,
+        "completed_count": 0
+    },
+    "blocking_issues_count": 0,
+    "has_tasks": true,
+    "task_status": "0 of 0 checklist items completed",
+    "_links": {
+        "self": "https://gitlab.com/api/v4/projects/51190657/issues/226",
+        "notes": "https://gitlab.com/api/v4/projects/51190657/issues/226/notes",
+        "award_emoji": "https://gitlab.com/api/v4/projects/51190657/issues/226/award_emoji",
+        "project": "https://gitlab.com/api/v4/projects/51190657",
+        "closed_as_duplicate_of": null
+    },
+    "references": {
+        "short": "#226",
+        "relative": "#226",
+        "full": "test3560241/personalproject#226"
+    },
+    "severity": "UNKNOWN",
+    "subscribed": true,
+    "moved_to_id": null,
+    "service_desk_reply_to": null
+}
+Request method:	DELETE
+Request URI:	https://gitlab.com/api/v4/projects/51190657/issues/226
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	projectId=51190657
+				issueId=226
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 204 No Content
+Date: Tue, 17 Oct 2023 16:07:20 GMT
+Connection: keep-alive
+cache-control: no-cache
+content-security-policy: default-src 'none'
+vary: Origin
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-gitlab-meta: {"correlation_id":"59a975251b4b0c90ba2a6b8a82d6362c","version":"1"}
+x-request-id: 59a975251b4b0c90ba2a6b8a82d6362c
+x-runtime: 0.240316
+strict-transport-security: max-age=31536000
+referrer-policy: strict-origin-when-cross-origin
+ratelimit-observed: 14
+ratelimit-remaining: 1986
+ratelimit-reset: 1697558900
+ratelimit-resettime: Tue, 17 Oct 2023 16:08:20 GMT
+ratelimit-limit: 2000
+gitlab-lb: haproxy-main-07-lb-gprd
+gitlab-sv: localhost
+CF-Cache-Status: DYNAMIC
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=HlPI0o8K20UKd8VwNQ2HtJGE5GsRiymRjRFgoxXZPRu9PIsELP7C2FmxpF6Vcek%2B%2BTZ4G0%2FZunM9mOwyw2O30OtEk%2BJCd78u%2F%2BSoRxwuL5cTQrL94jP8k1VnsKo%3D"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Set-Cookie: _cfuvid=UqteTJH_7gYAJvWFfpzkKotcohQYc6nW.bP2Z1km_6s-1697558840342-0-604800000; path=/; domain=.gitlab.com; HttpOnly; Secure; SameSite=None
+Server: cloudflare
+CF-RAY: 8179cb3dbec366e8-AMS
+Request method:	GET
+Request URI:	https://gitlab.com/api/v4/projects/51190657/issues/226
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	projectId=51190657
+				issueId=226
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 404 Not Found
+Date: Tue, 17 Oct 2023 16:07:20 GMT
+Content-Type: application/json
+Content-Length: 27
+Connection: keep-alive
+cache-control: no-cache
+content-security-policy: default-src 'none'
+vary: Origin, Accept-Encoding
+x-gitlab-meta: {"correlation_id":"bb179898fe556fa79e33b6a2d9613ac3","version":"1"}
+x-request-id: bb179898fe556fa79e33b6a2d9613ac3
+x-runtime: 0.179927
+strict-transport-security: max-age=31536000
+referrer-policy: strict-origin-when-cross-origin
+ratelimit-observed: 15
+ratelimit-remaining: 1985
+ratelimit-reset: 1697558900
+ratelimit-resettime: Tue, 17 Oct 2023 16:08:20 GMT
+ratelimit-limit: 2000
+gitlab-lb: haproxy-main-13-lb-gprd
+gitlab-sv: localhost
+CF-Cache-Status: MISS
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=k5B1uxsL4qEyIIyy4lo9jnVK0xBLwPKmU%2FfEQAWgUayFtM4zJ5jxuDrBEeEHlT8dxp6zzAmxD7rKhsjT1FkoyjzIaokOtBBDgXsdY261YF1UYq8YmD761GggkkY%3D"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Content-Type-Options: nosniff
+Set-Cookie: _cfuvid=eKqhjZBtj1VgQA8uQaccUMDx_Gdyt9APVkev_6Mp7gk-1697558840758-0-604800000; path=/; domain=.gitlab.com; HttpOnly; Secure; SameSite=None
+Server: cloudflare
+CF-RAY: 8179cb409e730bf1-AMS
+
+{
+    "message": "404 Not found"
+}
+Request method:	POST
+Request URI:	https://gitlab.com/api/v4/projects/51190657/issues
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	projectId=51190657
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "title": "New Issue title 2",
+    "description": "New issue2 description",
+    "labels": "smoke",
+    "assignee_id": "345678",
+    "issue_type": "incident"
+}
+HTTP/1.1 201 Created
+Date: Tue, 17 Oct 2023 16:07:22 GMT
+Content-Type: application/json
+Content-Length: 1558
+Connection: keep-alive
+cache-control: max-age=0, private, must-revalidate
+content-security-policy: default-src 'none'
+etag: W/"0e435c20a75480709a873646341852de"
+vary: Origin
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-gitlab-meta: {"correlation_id":"fcc84dd823e49cb194ed57eb628f3fb8","version":"1"}
+x-request-id: fcc84dd823e49cb194ed57eb628f3fb8
+x-runtime: 1.104585
+strict-transport-security: max-age=31536000
+referrer-policy: strict-origin-when-cross-origin
+ratelimit-observed: 15
+ratelimit-remaining: 1984
+ratelimit-reset: 1697558902
+ratelimit-resettime: Tue, 17 Oct 2023 16:08:22 GMT
+ratelimit-limit: 2000
+gitlab-lb: haproxy-main-32-lb-gprd
+gitlab-sv: localhost
+CF-Cache-Status: DYNAMIC
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=IKUrPGojvpdNmEUdVxvtJCXp99UUXMH%2FVco5hTQWHCjcG39JnbLp4apcLo%2BmnRsaGdvIpTa1CIBFKJkMCg2fieQCblR%2F88v3ocz7lPfhuaPdyHxkFmJZ2oEEclI%3D"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Set-Cookie: _cfuvid=4.Hk0E2FBjb11UvmoGyTRCRZa8G1WHi9iRUNgxIdAhA-1697558842127-0-604800000; path=/; domain=.gitlab.com; HttpOnly; Secure; SameSite=None
+Server: cloudflare
+CF-RAY: 8179cb438e80b97e-AMS
+
+{
+    "id": 136577675,
+    "iid": 227,
+    "project_id": 51190657,
+    "title": "New Issue title 2",
+    "description": "New issue2 description",
+    "state": "opened",
+    "created_at": "2023-10-17T16:07:21.680Z",
+    "updated_at": "2023-10-17T16:07:21.680Z",
+    "closed_at": null,
+    "closed_by": null,
+    "labels": [
+        "smoke"
+    ],
+    "milestone": null,
+    "assignees": [
+        
+    ],
+    "author": {
+        "id": 18335407,
+        "username": "archutce",
+        "name": "Archana Velu",
+        "state": "active",
+        "locked": false,
+        "avatar_url": "https://secure.gravatar.com/avatar/eccbeaf25ea32864b42569f7cc18837e?s=80&d=identicon",
+        "web_url": "https://gitlab.com/archutce"
+    },
+    "type": "INCIDENT",
+    "assignee": null,
+    "user_notes_count": 0,
+    "merge_requests_count": 0,
+    "upvotes": 0,
+    "downvotes": 0,
+    "due_date": null,
+    "confidential": false,
+    "discussion_locked": null,
+    "issue_type": "incident",
+    "web_url": "https://gitlab.com/test3560241/personalproject/-/issues/227",
+    "time_stats": {
+        "time_estimate": 0,
+        "total_time_spent": 0,
+        "human_time_estimate": null,
+        "human_total_time_spent": null
+    },
+    "task_completion_status": {
+        "count": 0,
+        "completed_count": 0
+    },
+    "blocking_issues_count": 0,
+    "has_tasks": true,
+    "task_status": "0 of 0 checklist items completed",
+    "_links": {
+        "self": "https://gitlab.com/api/v4/projects/51190657/issues/227",
+        "notes": "https://gitlab.com/api/v4/projects/51190657/issues/227/notes",
+        "award_emoji": "https://gitlab.com/api/v4/projects/51190657/issues/227/award_emoji",
+        "project": "https://gitlab.com/api/v4/projects/51190657",
+        "closed_as_duplicate_of": null
+    },
+    "references": {
+        "short": "#227",
+        "relative": "#227",
+        "full": "test3560241/personalproject#227"
+    },
+    "severity": "UNKNOWN",
+    "subscribed": true,
+    "moved_to_id": null,
+    "service_desk_reply_to": null
+}
+Request method:	GET
+Request URI:	https://gitlab.com/api/v4/projects/51190657/issues/227
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	projectId=51190657
+				issueId=227
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Tue, 17 Oct 2023 16:07:22 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+cache-control: max-age=0, private, must-revalidate
+content-security-policy: default-src 'none'
+etag: W/"0e435c20a75480709a873646341852de"
+vary: Origin, Accept-Encoding
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-gitlab-meta: {"correlation_id":"c927fca9422f71e1cf06083ffcba53a2","version":"1"}
+x-request-id: c927fca9422f71e1cf06083ffcba53a2
+x-runtime: 0.173174
+strict-transport-security: max-age=31536000
+referrer-policy: strict-origin-when-cross-origin
+ratelimit-observed: 16
+ratelimit-remaining: 1984
+ratelimit-reset: 1697558902
+ratelimit-resettime: Tue, 17 Oct 2023 16:08:22 GMT
+ratelimit-limit: 2000
+gitlab-lb: haproxy-main-25-lb-gprd
+gitlab-sv: localhost
+CF-Cache-Status: MISS
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=2dH8dbCoBw9ew5Plm0h%2FEUxQj01D0Ytnoh9KCpSIL%2BjyCBAie%2BcLGvd1HWEQlc6OXR3sNspJpZ2DbgIxtgGNIL78D5U2i%2FnZ4fmisB%2FA%2FHfMyePECUdYvVusKhs%3D"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Set-Cookie: _cfuvid=NwjfH3QgecYSMZpYQWPq7WoRGDnkQSLm0kt6YYLTZnc-1697558842685-0-604800000; path=/; domain=.gitlab.com; HttpOnly; Secure; SameSite=None
+Server: cloudflare
+CF-RAY: 8179cb4cedd31c88-AMS
+Content-Encoding: gzip
+
+{
+    "id": 136577675,
+    "iid": 227,
+    "project_id": 51190657,
+    "title": "New Issue title 2",
+    "description": "New issue2 description",
+    "state": "opened",
+    "created_at": "2023-10-17T16:07:21.680Z",
+    "updated_at": "2023-10-17T16:07:21.680Z",
+    "closed_at": null,
+    "closed_by": null,
+    "labels": [
+        "smoke"
+    ],
+    "milestone": null,
+    "assignees": [
+        
+    ],
+    "author": {
+        "id": 18335407,
+        "username": "archutce",
+        "name": "Archana Velu",
+        "state": "active",
+        "locked": false,
+        "avatar_url": "https://secure.gravatar.com/avatar/eccbeaf25ea32864b42569f7cc18837e?s=80&d=identicon",
+        "web_url": "https://gitlab.com/archutce"
+    },
+    "type": "INCIDENT",
+    "assignee": null,
+    "user_notes_count": 0,
+    "merge_requests_count": 0,
+    "upvotes": 0,
+    "downvotes": 0,
+    "due_date": null,
+    "confidential": false,
+    "discussion_locked": null,
+    "issue_type": "incident",
+    "web_url": "https://gitlab.com/test3560241/personalproject/-/issues/227",
+    "time_stats": {
+        "time_estimate": 0,
+        "total_time_spent": 0,
+        "human_time_estimate": null,
+        "human_total_time_spent": null
+    },
+    "task_completion_status": {
+        "count": 0,
+        "completed_count": 0
+    },
+    "blocking_issues_count": 0,
+    "has_tasks": true,
+    "task_status": "0 of 0 checklist items completed",
+    "_links": {
+        "self": "https://gitlab.com/api/v4/projects/51190657/issues/227",
+        "notes": "https://gitlab.com/api/v4/projects/51190657/issues/227/notes",
+        "award_emoji": "https://gitlab.com/api/v4/projects/51190657/issues/227/award_emoji",
+        "project": "https://gitlab.com/api/v4/projects/51190657",
+        "closed_as_duplicate_of": null
+    },
+    "references": {
+        "short": "#227",
+        "relative": "#227",
+        "full": "test3560241/personalproject#227"
+    },
+    "severity": "UNKNOWN",
+    "subscribed": true,
+    "moved_to_id": null,
+    "service_desk_reply_to": null
+}
+Request method:	PUT
+Request URI:	https://gitlab.com/api/v4/projects/51190657/issues/227?add_labels=regression&due_date=2023-11-25
+Proxy:			<none>
+Request params:	<none>
+Query params:	add_labels=regression
+				due_date=2023-11-25
+Form params:	<none>
+Path params:	projectId=51190657
+				issueId=227
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "remove_labels": "bug",
+    "discussion_locked": false,
+    "issue_type": "incident",
+    "title": "updated the title of the created issue",
+    "confidential": true
+}
+HTTP/1.1 200 OK
+Date: Tue, 17 Oct 2023 16:07:23 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+cache-control: max-age=0, private, must-revalidate
+content-security-policy: default-src 'none'
+etag: W/"bc96e8a96dc4ca7936d4926ac555a7d2"
+vary: Origin, Accept-Encoding
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-gitlab-meta: {"correlation_id":"113c8458384fc06f67a16c931ebbc234","version":"1"}
+x-request-id: 113c8458384fc06f67a16c931ebbc234
+x-runtime: 0.720538
+strict-transport-security: max-age=31536000
+referrer-policy: strict-origin-when-cross-origin
+ratelimit-observed: 17
+ratelimit-remaining: 1983
+ratelimit-reset: 1697558903
+ratelimit-resettime: Tue, 17 Oct 2023 16:08:23 GMT
+ratelimit-limit: 2000
+gitlab-lb: haproxy-main-05-lb-gprd
+gitlab-sv: localhost
+CF-Cache-Status: DYNAMIC
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=kPrmOCi8NSfDHRefsTr2LQgszrE9TRbNUhHhPuHrnX4lPheLMFvpXersKVIZKOKTCf%2FIO6Y2dcg46DOy%2BxJi%2FMxgHdxYIXlfXM7y4CzrkeWtBrMYVM%2BtW%2BTK%2FD8%3D"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Set-Cookie: _cfuvid=FQ9ou8S4gou5bemgmWggp3og4SQEU9VZHOylM4xkQkg-1697558843753-0-604800000; path=/; domain=.gitlab.com; HttpOnly; Secure; SameSite=None
+Server: cloudflare
+CF-RAY: 8179cb4fcdfa1ec2-AMS
+Content-Encoding: gzip
+
+{
+    "id": 136577675,
+    "iid": 227,
+    "project_id": 51190657,
+    "title": "updated the title of the created issue",
+    "description": "New issue2 description",
+    "state": "opened",
+    "created_at": "2023-10-17T16:07:21.680Z",
+    "updated_at": "2023-10-17T16:07:23.325Z",
+    "closed_at": null,
+    "closed_by": null,
+    "labels": [
+        "regression",
+        "smoke"
+    ],
+    "milestone": null,
+    "assignees": [
+        
+    ],
+    "author": {
+        "id": 18335407,
+        "username": "archutce",
+        "name": "Archana Velu",
+        "state": "active",
+        "locked": false,
+        "avatar_url": "https://secure.gravatar.com/avatar/eccbeaf25ea32864b42569f7cc18837e?s=80&d=identicon",
+        "web_url": "https://gitlab.com/archutce"
+    },
+    "type": "INCIDENT",
+    "assignee": null,
+    "user_notes_count": 0,
+    "merge_requests_count": 0,
+    "upvotes": 0,
+    "downvotes": 0,
+    "due_date": "2023-11-25",
+    "confidential": true,
+    "discussion_locked": false,
+    "issue_type": "incident",
+    "web_url": "https://gitlab.com/test3560241/personalproject/-/issues/227",
+    "time_stats": {
+        "time_estimate": 0,
+        "total_time_spent": 0,
+        "human_time_estimate": null,
+        "human_total_time_spent": null
+    },
+    "task_completion_status": {
+        "count": 0,
+        "completed_count": 0
+    },
+    "blocking_issues_count": 0,
+    "has_tasks": true,
+    "task_status": "0 of 0 checklist items completed",
+    "_links": {
+        "self": "https://gitlab.com/api/v4/projects/51190657/issues/227",
+        "notes": "https://gitlab.com/api/v4/projects/51190657/issues/227/notes",
+        "award_emoji": "https://gitlab.com/api/v4/projects/51190657/issues/227/award_emoji",
+        "project": "https://gitlab.com/api/v4/projects/51190657",
+        "closed_as_duplicate_of": null
+    },
+    "references": {
+        "short": "#227",
+        "relative": "#227",
+        "full": "test3560241/personalproject#227"
+    },
+    "severity": "UNKNOWN",
+    "subscribed": true,
+    "moved_to_id": null,
+    "service_desk_reply_to": null
+}
+Request method:	GET
+Request URI:	https://gitlab.com/api/v4/projects/51190657/issues/227
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	projectId=51190657
+				issueId=227
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Tue, 17 Oct 2023 16:07:24 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+cache-control: max-age=0, private, must-revalidate
+content-security-policy: default-src 'none'
+etag: W/"bc96e8a96dc4ca7936d4926ac555a7d2"
+vary: Origin, Accept-Encoding
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-gitlab-meta: {"correlation_id":"fb3d5d9cb127d5b51ce2d3faccbe8c58","version":"1"}
+x-request-id: fb3d5d9cb127d5b51ce2d3faccbe8c58
+x-runtime: 0.209988
+strict-transport-security: max-age=31536000
+referrer-policy: strict-origin-when-cross-origin
+ratelimit-observed: 18
+ratelimit-remaining: 1982
+ratelimit-reset: 1697558904
+ratelimit-resettime: Tue, 17 Oct 2023 16:08:24 GMT
+ratelimit-limit: 2000
+gitlab-lb: haproxy-main-31-lb-gprd
+gitlab-sv: localhost
+CF-Cache-Status: MISS
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=y82m9WGrtqthz92nKM3seAag%2FM%2FVB00s8%2FVfUpo%2FhI8Z0i2qOWUZ4t68Cd%2FWSWDwEd4XZS0tv%2BP%2FA3Up65h2Fi4rbheEjNWwOcDOb1DTFR3wYQjc1FczRSZiiT8%3D"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Set-Cookie: _cfuvid=hOjDRNP1YErSTp4d81I89LYmhurB5kSU1pDuNan9Jh4-1697558844270-0-604800000; path=/; domain=.gitlab.com; HttpOnly; Secure; SameSite=None
+Server: cloudflare
+CF-RAY: 8179cb569ee2b7d9-AMS
+Content-Encoding: gzip
+
+{
+    "id": 136577675,
+    "iid": 227,
+    "project_id": 51190657,
+    "title": "updated the title of the created issue",
+    "description": "New issue2 description",
+    "state": "opened",
+    "created_at": "2023-10-17T16:07:21.680Z",
+    "updated_at": "2023-10-17T16:07:23.325Z",
+    "closed_at": null,
+    "closed_by": null,
+    "labels": [
+        "regression",
+        "smoke"
+    ],
+    "milestone": null,
+    "assignees": [
+        
+    ],
+    "author": {
+        "id": 18335407,
+        "username": "archutce",
+        "name": "Archana Velu",
+        "state": "active",
+        "locked": false,
+        "avatar_url": "https://secure.gravatar.com/avatar/eccbeaf25ea32864b42569f7cc18837e?s=80&d=identicon",
+        "web_url": "https://gitlab.com/archutce"
+    },
+    "type": "INCIDENT",
+    "assignee": null,
+    "user_notes_count": 0,
+    "merge_requests_count": 0,
+    "upvotes": 0,
+    "downvotes": 0,
+    "due_date": "2023-11-25",
+    "confidential": true,
+    "discussion_locked": false,
+    "issue_type": "incident",
+    "web_url": "https://gitlab.com/test3560241/personalproject/-/issues/227",
+    "time_stats": {
+        "time_estimate": 0,
+        "total_time_spent": 0,
+        "human_time_estimate": null,
+        "human_total_time_spent": null
+    },
+    "task_completion_status": {
+        "count": 0,
+        "completed_count": 0
+    },
+    "blocking_issues_count": 0,
+    "has_tasks": true,
+    "task_status": "0 of 0 checklist items completed",
+    "_links": {
+        "self": "https://gitlab.com/api/v4/projects/51190657/issues/227",
+        "notes": "https://gitlab.com/api/v4/projects/51190657/issues/227/notes",
+        "award_emoji": "https://gitlab.com/api/v4/projects/51190657/issues/227/award_emoji",
+        "project": "https://gitlab.com/api/v4/projects/51190657",
+        "closed_as_duplicate_of": null
+    },
+    "references": {
+        "short": "#227",
+        "relative": "#227",
+        "full": "test3560241/personalproject#227"
+    },
+    "severity": "UNKNOWN",
+    "subscribed": true,
+    "moved_to_id": null,
+    "service_desk_reply_to": null
+}
+Request method:	DELETE
+Request URI:	https://gitlab.com/api/v4/projects/51190657/issues/227
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	projectId=51190657
+				issueId=227
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 204 No Content
+Date: Tue, 17 Oct 2023 16:07:24 GMT
+Connection: keep-alive
+cache-control: no-cache
+content-security-policy: default-src 'none'
+vary: Origin
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-gitlab-meta: {"correlation_id":"6d067ef8bbfedef439e59d078ddd4d71","version":"1"}
+x-request-id: 6d067ef8bbfedef439e59d078ddd4d71
+x-runtime: 0.306256
+strict-transport-security: max-age=31536000
+referrer-policy: strict-origin-when-cross-origin
+ratelimit-observed: 19
+ratelimit-remaining: 1981
+ratelimit-reset: 1697558904
+ratelimit-resettime: Tue, 17 Oct 2023 16:08:24 GMT
+ratelimit-limit: 2000
+gitlab-lb: haproxy-main-27-lb-gprd
+gitlab-sv: localhost
+CF-Cache-Status: DYNAMIC
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=htf3zygN%2FV9MH42IVnjMAIRWv%2Bo9e5I4bzR%2BLmnIdrc7ga5KVW5%2BlVVfORv7rXMZ3WqV0fjGRs4IKsguXFSswed67YDAhpcHC3y0P1jo3eFmA%2F%2BV5OUACnyqbdw%3D"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Set-Cookie: _cfuvid=TOiMpsHry68ivfRXB4S9ZT0x6eAfzkRKmzd5kkN3Zi0-1697558844877-0-604800000; path=/; domain=.gitlab.com; HttpOnly; Secure; SameSite=None
+Server: cloudflare
+CF-RAY: 8179cb59cdf31c7b-AMS
+Request method:	GET
+Request URI:	https://gitlab.com/api/v4/projects/51190657/issues/227
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	projectId=51190657
+				issueId=227
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 404 Not Found
+Date: Tue, 17 Oct 2023 16:07:25 GMT
+Content-Type: application/json
+Content-Length: 27
+Connection: keep-alive
+cache-control: no-cache
+content-security-policy: default-src 'none'
+vary: Origin, Accept-Encoding
+x-gitlab-meta: {"correlation_id":"5b764481f76310eede30ed18262ba51c","version":"1"}
+x-request-id: 5b764481f76310eede30ed18262ba51c
+x-runtime: 0.110985
+strict-transport-security: max-age=31536000
+referrer-policy: strict-origin-when-cross-origin
+ratelimit-observed: 20
+ratelimit-remaining: 1980
+ratelimit-reset: 1697558905
+ratelimit-resettime: Tue, 17 Oct 2023 16:08:25 GMT
+ratelimit-limit: 2000
+gitlab-lb: haproxy-main-34-lb-gprd
+gitlab-sv: localhost
+CF-Cache-Status: MISS
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=o77%2FX%2FDeJpevOJGmXq7fVHf5WIMnwORAz9MWzrYPR9rDTZUeF8GiFngIOQbx3XNymiufymhCsXrhrrnfNCk88uvPhry1M%2BN1VnMnOV%2F%2B7uaTUfI7f%2BbOttmzBBg%3D"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Content-Type-Options: nosniff
+Set-Cookie: _cfuvid=Px_kpwMQDYxyOW_HX9OeaS5Vc5nE6mf1MgAQZqVBbNg-1697558845193-0-604800000; path=/; domain=.gitlab.com; HttpOnly; Secure; SameSite=None
+Server: cloudflare
+CF-RAY: 8179cb5cf9110c09-AMS
+
+{
+    "message": "404 Not found"
+}
+Request method:	POST
+Request URI:	https://gitlab.com/api/v4/projects/51190657/issues
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	projectId=51190657
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "title": "New Issue title 3",
+    "description": "New Issue3 description",
+    "labels": "regression",
+    "assignee_id": "891234",
+    "issue_type": "issue"
+}
+HTTP/1.1 201 Created
+Date: Tue, 17 Oct 2023 16:07:26 GMT
+Content-Type: application/json
+Content-Length: 1557
+Connection: keep-alive
+cache-control: max-age=0, private, must-revalidate
+content-security-policy: default-src 'none'
+etag: W/"dd2730ea2201e76eb8153b4efd784833"
+vary: Origin
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-gitlab-meta: {"correlation_id":"55b148aa27a3828f56b77b548f2dfec2","version":"1"}
+x-request-id: 55b148aa27a3828f56b77b548f2dfec2
+x-runtime: 1.114409
+strict-transport-security: max-age=31536000
+referrer-policy: strict-origin-when-cross-origin
+ratelimit-observed: 20
+ratelimit-remaining: 1980
+ratelimit-reset: 1697558906
+ratelimit-resettime: Tue, 17 Oct 2023 16:08:26 GMT
+ratelimit-limit: 2000
+gitlab-lb: haproxy-main-33-lb-gprd
+gitlab-sv: localhost
+CF-Cache-Status: DYNAMIC
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=HFg3x%2BBoi9YXJUOqvMDPfOqc8ThEMwl4bnW6JFicc7HtHmDUZfL1WJX3XjugPopCE3h3WTk27F%2B0runrxWNJdjD0z86%2F64%2BzlGkw3ufM3QNNSikD6ttKkrfISJk%3D"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Set-Cookie: _cfuvid=kgaltESz0XHvNlofKuWbsQRZttUR_6eYYENYejqiKy4-1697558846601-0-604800000; path=/; domain=.gitlab.com; HttpOnly; Secure; SameSite=None
+Server: cloudflare
+CF-RAY: 8179cb5f8c25b71c-AMS
+
+{
+    "id": 136577677,
+    "iid": 228,
+    "project_id": 51190657,
+    "title": "New Issue title 3",
+    "description": "New Issue3 description",
+    "state": "opened",
+    "created_at": "2023-10-17T16:07:25.832Z",
+    "updated_at": "2023-10-17T16:07:25.832Z",
+    "closed_at": null,
+    "closed_by": null,
+    "labels": [
+        "regression"
+    ],
+    "milestone": null,
+    "assignees": [
+        
+    ],
+    "author": {
+        "id": 18335407,
+        "username": "archutce",
+        "name": "Archana Velu",
+        "state": "active",
+        "locked": false,
+        "avatar_url": "https://secure.gravatar.com/avatar/eccbeaf25ea32864b42569f7cc18837e?s=80&d=identicon",
+        "web_url": "https://gitlab.com/archutce"
+    },
+    "type": "ISSUE",
+    "assignee": null,
+    "user_notes_count": 0,
+    "merge_requests_count": 0,
+    "upvotes": 0,
+    "downvotes": 0,
+    "due_date": null,
+    "confidential": false,
+    "discussion_locked": null,
+    "issue_type": "issue",
+    "web_url": "https://gitlab.com/test3560241/personalproject/-/issues/228",
+    "time_stats": {
+        "time_estimate": 0,
+        "total_time_spent": 0,
+        "human_time_estimate": null,
+        "human_total_time_spent": null
+    },
+    "task_completion_status": {
+        "count": 0,
+        "completed_count": 0
+    },
+    "blocking_issues_count": 0,
+    "has_tasks": true,
+    "task_status": "0 of 0 checklist items completed",
+    "_links": {
+        "self": "https://gitlab.com/api/v4/projects/51190657/issues/228",
+        "notes": "https://gitlab.com/api/v4/projects/51190657/issues/228/notes",
+        "award_emoji": "https://gitlab.com/api/v4/projects/51190657/issues/228/award_emoji",
+        "project": "https://gitlab.com/api/v4/projects/51190657",
+        "closed_as_duplicate_of": null
+    },
+    "references": {
+        "short": "#228",
+        "relative": "#228",
+        "full": "test3560241/personalproject#228"
+    },
+    "severity": "UNKNOWN",
+    "subscribed": true,
+    "moved_to_id": null,
+    "service_desk_reply_to": null
+}
+Request method:	DELETE
+Request URI:	https://gitlab.com/api/v4/projects/51190657/issues/228
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	projectId=51190657
+				issueId=228
 Headers:		Accept=*/*
 				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 401 Unauthorized
-Date: Tue, 17 Oct 2023 01:20:21 GMT
+Date: Tue, 17 Oct 2023 16:07:26 GMT
 Content-Type: application/json
 Content-Length: 30
 Connection: keep-alive
@@ -21,43 +1228,43 @@ content-security-policy: default-src 'none'
 vary: Origin
 x-content-type-options: nosniff
 x-frame-options: SAMEORIGIN
-x-gitlab-meta: {"correlation_id":"e3992eb991f5a3c98479ed76517e4c47","version":"1"}
-x-request-id: e3992eb991f5a3c98479ed76517e4c47
-x-runtime: 0.023610
+x-gitlab-meta: {"correlation_id":"8a648fa551cfc8081e350bb54869e93b","version":"1"}
+x-request-id: 8a648fa551cfc8081e350bb54869e93b
+x-runtime: 0.035309
 strict-transport-security: max-age=31536000
 referrer-policy: strict-origin-when-cross-origin
-ratelimit-observed: 3
-ratelimit-remaining: 1997
-ratelimit-reset: 1697505681
-ratelimit-resettime: Tue, 17 Oct 2023 01:21:21 GMT
+ratelimit-observed: 21
+ratelimit-remaining: 1979
+ratelimit-reset: 1697558906
+ratelimit-resettime: Tue, 17 Oct 2023 16:08:26 GMT
 ratelimit-limit: 2000
-gitlab-lb: haproxy-main-10-lb-gprd
+gitlab-lb: haproxy-main-01-lb-gprd
 gitlab-sv: localhost
 CF-Cache-Status: DYNAMIC
-Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=K6Zw9XktzYgQRcNRrrswpbbcRjQ%2FH2K%2FCy9IZV560tsmF%2BT8ZE44GRZfFPVyS166zedd6pi730q0D5Auhzj1PKjPFWf9KI5XzCL0rQesFxWLtPKd%2BTNt8f%2BTE%2FI%3D"}],"group":"cf-nel","max_age":604800}
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=OlAsqDHpgyFBQurDk4At%2Few05YO1ixQHQxHKDfREPjjvm2EyBmCz2vWjCRYDU3vY2XRCVwnvQWHid0ENXvPyRNBeD%2BB0qwuVjbkm%2F78iBKy5Pz1dPHRyrcHNEnM%3D"}],"group":"cf-nel","max_age":604800}
 NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
-Set-Cookie: _cfuvid=240zjq2ZX1npMxmE9AG7oq.fzWIwsVF6Abtqg5FnHf0-1697505621453-0-604800000; path=/; domain=.gitlab.com; HttpOnly; Secure; SameSite=None
+Set-Cookie: _cfuvid=_eQAEuCiamk_KKaq_GQXHfOmOPJL0_DRW69jMji1RuU-1697558846980-0-604800000; path=/; domain=.gitlab.com; HttpOnly; Secure; SameSite=None
 Server: cloudflare
-CF-RAY: 8174b7f53d2f0c71-AMS
+CF-RAY: 8179cb68a8c466a5-AMS
 
 {
     "message": "401 Unauthorized"
 }
 Request method:	DELETE
-Request URI:	https://gitlab.com/api/v4/projects/51190657/issues/64
+Request URI:	https://gitlab.com/api/v4/projects/51190657/issues/228
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
 Path params:	projectId=51190657
-				issueId=64
+				issueId=228
 Headers:		Accept=*/*
 				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 401 Unauthorized
-Date: Tue, 17 Oct 2023 01:20:21 GMT
+Date: Tue, 17 Oct 2023 16:07:27 GMT
 Content-Type: application/json
 Content-Length: 118
 Connection: keep-alive
@@ -65,27 +1272,161 @@ cache-control: no-cache
 content-security-policy: default-src 'none'
 vary: Origin
 www-authenticate: Bearer realm="Protected by OAuth 2.0", error="invalid_token", error_description="Token is expired. You can either do re-authorization or token refresh."
-x-gitlab-meta: {"correlation_id":"f3114886f8d073c174dfb3f1f2b7340b","version":"1"}
-x-request-id: f3114886f8d073c174dfb3f1f2b7340b
-x-runtime: 0.038149
+x-gitlab-meta: {"correlation_id":"e9345e1a2e813350423cd281d2218445","version":"1"}
+x-request-id: e9345e1a2e813350423cd281d2218445
+x-runtime: 0.031538
 strict-transport-security: max-age=31536000
 referrer-policy: strict-origin-when-cross-origin
-ratelimit-observed: 4
-ratelimit-remaining: 1996
-ratelimit-reset: 1697505681
-ratelimit-resettime: Tue, 17 Oct 2023 01:21:21 GMT
+ratelimit-observed: 22
+ratelimit-remaining: 1978
+ratelimit-reset: 1697558907
+ratelimit-resettime: Tue, 17 Oct 2023 16:08:27 GMT
 ratelimit-limit: 2000
-gitlab-lb: haproxy-main-26-lb-gprd
+gitlab-lb: haproxy-main-15-lb-gprd
 gitlab-sv: localhost
 CF-Cache-Status: DYNAMIC
-Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=gauSWq0yOvspfECABmlViiZu4d2ASnABs4ksIvbJqsGR%2F3%2F6SAB%2FXG8rM6nEGktD3BoHZF3KL3OK94aLh%2FttiePmSI9VVHo50Lr7ettBaDpQXKXY%2BDQZU%2B%2F%2FPzY%3D"}],"group":"cf-nel","max_age":604800}
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=rso6o9ee420TJX21RJB9yf7URg0KiyeZnE6cvb8oWnzkJE7oMRxpdklST6C7YIz%2BMUsr74JOcqMCRFDwPJMF0AVtjXvNwYKYFY0IenE2H5rTvNqFOROpgLHcXvQ%3D"}],"group":"cf-nel","max_age":604800}
 NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
 X-Content-Type-Options: nosniff
-Set-Cookie: _cfuvid=xV3a82SLLIl33qwMc5I4KIKqaLaNm9.fk85Dc66SHrU-1697505621860-0-604800000; path=/; domain=.gitlab.com; HttpOnly; Secure; SameSite=None
+Set-Cookie: _cfuvid=ie53DjWCvArHfV48FoV6s2s2MvzyjvijuQpRi40aJoM-1697558847284-0-604800000; path=/; domain=.gitlab.com; HttpOnly; Secure; SameSite=None
 Server: cloudflare
-CF-RAY: 8174b7f7ab80b764-AMS
+CF-RAY: 8179cb6a8d126569-AMS
 
 {
     "error": "invalid_token",
     "error_description": "Token is expired. You can either do re-authorization or token refresh."
+}
+Request method:	DELETE
+Request URI:	https://gitlab.com/api/v4/projects/51190657/issues/2
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	projectId=51190657
+				issueId=2
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 404 Not Found
+Date: Tue, 17 Oct 2023 16:07:27 GMT
+Content-Type: application/json
+Content-Length: 33
+Connection: keep-alive
+cache-control: no-cache
+content-security-policy: default-src 'none'
+vary: Origin
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-gitlab-meta: {"correlation_id":"ed08689db27cdedfd2471449a122a32c","version":"1"}
+x-request-id: ed08689db27cdedfd2471449a122a32c
+x-runtime: 0.110470
+strict-transport-security: max-age=31536000
+referrer-policy: strict-origin-when-cross-origin
+ratelimit-observed: 23
+ratelimit-remaining: 1977
+ratelimit-reset: 1697558907
+ratelimit-resettime: Tue, 17 Oct 2023 16:08:27 GMT
+ratelimit-limit: 2000
+gitlab-lb: haproxy-main-34-lb-gprd
+gitlab-sv: localhost
+CF-Cache-Status: DYNAMIC
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=2vJOhNYLcADK8XmCGrYZoGq4K12gEovCj%2BM0KdFTbQDLHgmIcCMA1mcy%2BmNhWF7J%2Bwec%2BE0dEk43zR93CAisgBMKT6E8dY4RVFc4hsUQPRmY%2BVEEA5RjKJUOizE%3D"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Set-Cookie: _cfuvid=_hrAW_fyREmXXhf5ZlT_H6Y0rrQTzJ5jOsMNALbcnmE-1697558847637-0-604800000; path=/; domain=.gitlab.com; HttpOnly; Secure; SameSite=None
+Server: cloudflare
+CF-RAY: 8179cb6c5ea66565-AMS
+
+{
+    "message": "404 Issue Not Found"
+}
+Request method:	POST
+Request URI:	https://gitlab.com/api/v4/projects/51190657/issues
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	projectId=51190657
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+HTTP/1.1 400 Bad Request
+Date: Tue, 17 Oct 2023 16:07:27 GMT
+Content-Type: application/json
+Content-Length: 28
+Connection: keep-alive
+cache-control: no-cache
+content-security-policy: default-src 'none'
+vary: Origin
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-gitlab-meta: {"correlation_id":"c7eacc09c186fab5dddf61ccedaf4d2a","version":"1"}
+x-request-id: c7eacc09c186fab5dddf61ccedaf4d2a
+x-runtime: 0.045548
+strict-transport-security: max-age=31536000
+referrer-policy: strict-origin-when-cross-origin
+ratelimit-observed: 24
+ratelimit-remaining: 1976
+ratelimit-reset: 1697558907
+ratelimit-resettime: Tue, 17 Oct 2023 16:08:27 GMT
+ratelimit-limit: 2000
+gitlab-lb: haproxy-main-24-lb-gprd
+gitlab-sv: localhost
+CF-Cache-Status: DYNAMIC
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=DZ2N4XlxoVwkkHcnwKzhfA0v0dK1ARJi%2BkbVEGQ84DKu%2B41ZOam9F6j6DKn24NfzwUNKODl%2BI6n4jTQK595wcH%2B3Nj5eDsmZKdoTvGpzpykFutn3BqaXPTOeYWg%3D"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Set-Cookie: _cfuvid=zsfiLL_8k_s.o4Y1I7XHKisF1WS7L_jAYiKiqpYPcJo-1697558847991-0-604800000; path=/; domain=.gitlab.com; HttpOnly; Secure; SameSite=None
+Server: cloudflare
+CF-RAY: 8179cb6eee9c1b09-AMS
+
+{
+    "error": "title is missing"
+}
+Request method:	PUT
+Request URI:	https://gitlab.com/api/v4/projects/51190657/issues/228
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	projectId=51190657
+				issueId=228
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+HTTP/1.1 400 Bad Request
+Date: Tue, 17 Oct 2023 16:07:28 GMT
+Content-Type: application/json
+Content-Length: 266
+Connection: keep-alive
+cache-control: no-cache
+content-security-policy: default-src 'none'
+vary: Origin, Accept-Encoding
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-gitlab-meta: {"correlation_id":"42018ac253fe33d2229a4c7cecdb0647","version":"1"}
+x-request-id: 42018ac253fe33d2229a4c7cecdb0647
+x-runtime: 0.024322
+strict-transport-security: max-age=31536000
+referrer-policy: strict-origin-when-cross-origin
+ratelimit-observed: 25
+ratelimit-remaining: 1975
+ratelimit-reset: 1697558908
+ratelimit-resettime: Tue, 17 Oct 2023 16:08:28 GMT
+ratelimit-limit: 2000
+gitlab-lb: haproxy-main-01-lb-gprd
+gitlab-sv: localhost
+CF-Cache-Status: DYNAMIC
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=P8t11JE2GYhdYBsLQgx3%2FRk%2FdBppS0tx%2FsSq%2Bs06ZX%2B0h6KXXhflMCe2N1UwamrfWzuDOV1%2FYNV65aDFla9G2fr8ol9LKwxLLszeoVH7JHi0HokbNSDPrNOKp0s%3D"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Set-Cookie: _cfuvid=HQgwOtRvovSIH.Fl_4PbXg41tLns6gMgnK2T3vWRpjE-1697558848272-0-604800000; path=/; domain=.gitlab.com; HttpOnly; Secure; SameSite=None
+Server: cloudflare
+CF-RAY: 8179cb70d8fa666a-AMS
+
+{
+    "error": "assignee_id, assignee_ids, confidential, created_at, description, discussion_locked, due_date, labels, add_labels, remove_labels, milestone_id, state_event, title, issue_type, weight, epic_id, epic_iid are missing, at least one parameter must be provided"
 }

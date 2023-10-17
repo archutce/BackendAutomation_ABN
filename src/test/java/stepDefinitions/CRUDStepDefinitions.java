@@ -1,9 +1,15 @@
 package stepDefinitions;
 import static org.junit.Assert.*;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
+import java.util.stream.Stream;
 
 import static io.restassured.RestAssured.given;
+
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.restassured.path.json.JsonPath;
@@ -13,21 +19,27 @@ import io.restassured.specification.RequestSpecification;
 import resources.TestDataBuild;
 import org.apache.logging.log4j.*;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 public class CRUDStepDefinitions extends ResuableTestUtils {
 
 	RequestSpecification reqGiven;
 	Response actualCreateResponse,actualGetResponse,actualEditResponse,actualDeleteResponse;
-	String createIssueResponse, getIssueResponse,editIssueResponse;
+	String createIssueResponse, getIssueResponse,editIssueResponse,deleteIssueResponse;
 	JsonPath js;
 
 	String id;
+	int inValidIssueId=2;
 	String label="regression";
 	String due_date="2023-11-25";
 	String message="404 Not found";
+	String errorValue="title is missing";
+	HashMap<String, Object> deleteMap;
 	
 
 	TestDataBuild data = new TestDataBuild();
 	private static Logger log=LogManager.getLogger(CRUDStepDefinitions.class.getName());
+	ObjectMapper objectMapper = new ObjectMapper();
 	
 	//New Issue API - request body formed using POJO and values are taken from cucumber feature file
 		@Given("User calls NewIssue API  with  payload {string} {string} {string} {string} {string}")
@@ -48,7 +60,7 @@ public class CRUDStepDefinitions extends ResuableTestUtils {
 		createIssueResponse = actualCreateResponse.asString();
 		log.info("Create New Issue Response"+createIssueResponse);
 		
-		//Jsonpath to validate response body, validating the inputs passed are returned in the response
+		//Jsonpath to validate response body, validating whether the inputs passed in the request are returned in the response
 		js = ResuableTestUtils.rawToJson(createIssueResponse);
 		id = js.getString("iid");
 		assertEquals(title, js.getString("title"));
@@ -58,7 +70,7 @@ public class CRUDStepDefinitions extends ResuableTestUtils {
 		assertTrue(type.equalsIgnoreCase(js.getString("type")));
 	}
 
-	//Generic API response validation from the feature files
+	// API response validation from the feature files
 	@Then("API call success {string} equals {string}")
 		public void api_call_success_equals(String key, String value) {
 		assertEquals(js.getString(key), value);
@@ -88,7 +100,7 @@ public class CRUDStepDefinitions extends ResuableTestUtils {
 		
 		js = ResuableTestUtils.rawToJson(editIssueResponse);
 		
-		//verify the updated details
+		//verify the updated details in the response body
 		HashMap<String,Object> hashKey=data.editIssuePayload();
 		assertEquals(hashKey.get("title"),js.getString("title"));
 		assertEquals(hashKey.get("issue_type"),js.getString("issue_type"));
@@ -151,9 +163,116 @@ public class CRUDStepDefinitions extends ResuableTestUtils {
 		}else {	
 			log.info("Delete Issue API call successful");
 		}
-				
+		
+		deleteIssueResponse=actualDeleteResponse.asString();
+		
+		//Check if its empty response
+		if(deleteIssueResponse.isEmpty()) {
+			assertTrue(true);
+			log.info("Delete Issue API response is empty");
+		}
+			
+
 	}
 	
+	//validate invalid Token,expired Token, invalid Issue ID
+	
+	@And ("User calls {string} with {string}")
+	public void user_calls_with(String api, String condition) throws IOException {
+	
+	  if(condition.equalsIgnoreCase("InvalidAccessToken")) {
+		  deleteIssueResponse = given().spec(requestSpecification())
+					.pathParam("issueId", id).auth().oauth2(getGlobalPropertiesValue("invalidAccessToken"))
+					.when().delete("/projects/{projectId}/issues/{issueId}").then().spec(responseSpecification())
+					.statusCode(401).extract().response().asString(); 
+		  
+		  log.info("Delete Issue Response with InvalidAccessToken " + deleteIssueResponse);
+		  
+		  deleteMap = objectMapper.readValue(deleteIssueResponse, HashMap.class);
+		  log.info(deleteMap.get("message"));
+		  
+		  
+	  }
+	  if(condition.equalsIgnoreCase("ExpiredAccessToken")) {
+		  deleteIssueResponse = given().spec(requestSpecification())
+					.pathParam("issueId", id).auth().oauth2(getGlobalPropertiesValue("expiredAccessToken"))
+					.when().delete("/projects/{projectId}/issues/{issueId}").then().spec(responseSpecification())
+					.statusCode(401).extract().response().asString();
+		  log.info("Delete Issue Response with ExpiredAccessToken " + deleteIssueResponse);
+		  deleteMap = objectMapper.readValue(deleteIssueResponse, HashMap.class);
+		  log.info(deleteMap.get("error"));
+		  log.info(deleteMap.get("error_description"));
+		 
+	  } 
+	  if(condition.equalsIgnoreCase("InvalidIssueID")) {
+		  deleteIssueResponse = given().spec(requestSpecification())
+					.pathParam("issueId", inValidIssueId).auth().oauth2(getGlobalPropertiesValue("accessToken"))
+					.when().delete("/projects/{projectId}/issues/{issueId}").then().spec(responseSpecification())
+					.statusCode(404).extract().response().asString();
+		  log.info("Delete Issue Response with ExpiredAccessToken " + deleteIssueResponse);
+		  deleteMap = objectMapper.readValue(deleteIssueResponse, HashMap.class);
+		  log.info(deleteMap.get("error"));
+		  log.info(deleteMap.get("error_description"));
+		 
+	  } 
+	  
+	  
+	}
+	
+	  
+	  @Given("API call failed {string} equals {string}")
+	  public void api_call_failed_equals(String key, String value) {
+	      assertEquals(deleteMap.get(key),value);
+	  }
+	  
+	  
+	//Validating the mandatory checks
+	
+	@Given("User calls {string} without mandatory fields")
+	public void user_calls_without_mandatory_fields(String api) throws IOException {
+	    
+		//Create New Issue API without mandatory fields returns 400 with error title is missing
+		if(api.equalsIgnoreCase("newIssueAPI")) {
+	    	
+	    	log.info("calling newIssue API without mandatory fields");
+	    	createIssueResponse = given().spec(requestSpecification())
+					.auth().oauth2(getGlobalPropertiesValue("accessToken"))
+					.body(data.mandatoryRequest())
+					.when().post("/projects/{projectId}/issues").then().spec(responseSpecification())
+					.statusCode(400).extract().response().asString();
+
+			log.info("create Issue Error Response"+createIssueResponse);
+			js = ResuableTestUtils.rawToJson(createIssueResponse);
+			assertEquals(errorValue,js.getString("error"));
+			
+	    }
+		
+		//Edit New Issue API without mandatory fields returns 400 with parameters needed
+	    if(api.equalsIgnoreCase("editIssueAPI")) {
+	    	log.info("calling editIssue API without mandatory fields");
+	    	editIssueResponse = given().spec(requestSpecification())
+					.pathParam("issueId", id)
+					.auth().oauth2(getGlobalPropertiesValue("accessToken"))
+					.body(data.mandatoryRequest())
+					.when().put("/projects/{projectId}/issues/{issueId}").then().spec(responseSpecification())
+					.statusCode(400).extract().response().asString();
+	    	
+	    	log.info("edit Issue Error Response"+editIssueResponse);
+	    	js=rawToJson(editIssueResponse);
+	    	
+	    	//Conver JSON response as String and get the parameters needed using streams
+	    	
+	    	String errorMessage=js.getString("error");
+	    	log.info("edit Issue Error message"+errorMessage);
+	    	
+	    	Stream.of(errorMessage.split(","))
+	    	  .map(String::trim)
+	    	  .map (e -> new String(e))
+	    	  .forEach(e->log.info(e));
+	    }
+	    }
+	
+	//Reusable method to check status code
 	public void getStatusCodeCheck() {
 		assertEquals(200, actualGetResponse.getStatusCode());
 		

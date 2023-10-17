@@ -42,5 +42,10 @@ public class TestDataBuild {
 			
 	} 
 	
+	public String mandatoryRequest() {		
+		return "";
+		
+	}
+	
 
 }
