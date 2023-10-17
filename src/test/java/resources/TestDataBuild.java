@@ -12,7 +12,13 @@ import pojo.NewIssueRequest;
 public class TestDataBuild {
 	
 	String sheetname = "IssueAPIData";
-	String testCaseName = "EditIssueAPI";
+	String testCaseName;
+	public int inValidIssueId=2;
+	public String errorValue="title is missing";
+	public String label="regression";
+	public String due_date="2023-11-25";
+	public String message="404 Not found";
+
 
 	
 	//using POJO
@@ -29,7 +35,7 @@ public class TestDataBuild {
 	//using hashmap along with data driven from excel
 	public HashMap<String, Object> editIssuePayload() throws IOException {
 		HashMap<String,Object> editIssueMap= new HashMap<>();
-		
+		testCaseName = "EditIssueAPI";
 		DataDriven d=new DataDriven();
 		ArrayList<Object> dataValue=d.getDataFromExcel(sheetname, testCaseName);
 		
@@ -39,6 +45,21 @@ public class TestDataBuild {
 		editIssueMap.put("confidential", dataValue.get(4));
 		editIssueMap.put("discussion_locked", dataValue.get(5));
 		return editIssueMap;
+			
+	} 
+	
+	public HashMap<String, Object> newIssuePayloadMap() throws IOException {
+		HashMap<String,Object> newIssueMap= new HashMap<>();
+		testCaseName = "NewIssueAPI";
+		DataDriven d=new DataDriven();
+		ArrayList<Object> dataValue=d.getDataFromExcel(sheetname, testCaseName);
+		
+		newIssueMap.put("title", dataValue.get(1));
+		newIssueMap.put("description", dataValue.get(2));
+		newIssueMap.put("assigneeId", dataValue.get(3));
+		newIssueMap.put("labels", dataValue.get(4));
+		newIssueMap.put("type", dataValue.get(5));
+		return newIssueMap;
 			
 	} 
 	

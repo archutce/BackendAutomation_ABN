@@ -29,11 +29,7 @@ public class CRUDStepDefinitions extends ResuableTestUtils {
 	JsonPath js;
 
 	String id;
-	int inValidIssueId=2;
-	String label="regression";
-	String due_date="2023-11-25";
-	String message="404 Not found";
-	String errorValue="title is missing";
+
 	HashMap<String, Object> deleteMap;
 	
 
@@ -43,7 +39,7 @@ public class CRUDStepDefinitions extends ResuableTestUtils {
 	
 	//New Issue API - request body formed using POJO and values are taken from cucumber feature file
 		@Given("User calls NewIssue API  with  payload {string} {string} {string} {string} {string}")
-		public void user_calls_new_issue_api_with_payload(String title, String description, String assigneeId, String labels, String type) throws IOException {
+		public String user_calls_new_issue_api_with_payload(String title, String description, String assigneeId, String labels, String type) throws IOException {
 		actualCreateResponse = given().spec(requestSpecification())
 				.auth().oauth2(getGlobalPropertiesValue("accessToken"))
 				.body(data.newIssuePayload(title, description, assigneeId, labels, type))
@@ -68,6 +64,8 @@ public class CRUDStepDefinitions extends ResuableTestUtils {
 		assertNotEquals(assigneeId, js.getString("assignee")); //assignee id is not reflecting due to permissions, returns null
 		assertEquals(labels, js.getString("labels[0]"));
 		assertTrue(type.equalsIgnoreCase(js.getString("type")));
+		
+		return id;
 	}
 
 	// API response validation from the feature files
@@ -81,7 +79,7 @@ public class CRUDStepDefinitions extends ResuableTestUtils {
 	public void user_calls_edit_issue_api_to_update_the_details() throws IOException {
 		actualEditResponse = given().spec(requestSpecification())
 				.pathParam("issueId", id)
-				.queryParam("add_labels", label).queryParam("due_date", due_date)
+				.queryParam("add_labels", data.label).queryParam("due_date", data.due_date)
 				.auth().oauth2(getGlobalPropertiesValue("accessToken"))
 				.body(data.editIssuePayload())
 				.when().put("/projects/{projectId}/issues/{issueId}").then().spec(responseSpecification())
@@ -108,8 +106,8 @@ public class CRUDStepDefinitions extends ResuableTestUtils {
 		assertNull(js.getString("remove_labels"));
 		assertEquals(hashKey.get("confidential"),js.getBoolean("confidential"));
 		assertEquals(hashKey.get("discussion_locked"),js.getBoolean("discussion_locked"));
-		assertEquals(due_date,js.getString("due_date"));
-		assertEquals(label,js.getString("labels[0]"));
+		assertEquals(data.due_date,js.getString("due_date"));
+		assertEquals(data.label,js.getString("labels[0]"));
 	}
 	
 	//Get Issue API
@@ -143,7 +141,7 @@ public class CRUDStepDefinitions extends ResuableTestUtils {
 			if(value.equalsIgnoreCase("afterDeleteIssue")) {
 				assertEquals(404, actualGetResponse.getStatusCode());
 				js = ResuableTestUtils.rawToJson(getIssueResponse);	
-				assertEquals(message, js.getString("message"));
+				assertEquals(data.message, js.getString("message"));
 
 			}
 	
@@ -174,6 +172,8 @@ public class CRUDStepDefinitions extends ResuableTestUtils {
 			
 
 	}
+	
+	/*
 	
 	//validate invalid Token,expired Token, invalid Issue ID
 	
@@ -271,6 +271,8 @@ public class CRUDStepDefinitions extends ResuableTestUtils {
 	    	  .forEach(e->log.info(e));
 	    }
 	    }
+	    
+	    */
 	
 	//Reusable method to check status code
 	public void getStatusCodeCheck() {

@@ -21,8 +21,7 @@ Examples:
 	|New Issue title 2	|New issue2 description  |345678		 |smoke	 |incident	|
 	
 Scenario Outline: EdgeCases on Issue API
-	Given User calls NewIssue API  with  payload "<title>" "<description>" "<assigneeId>" "<labels>" "<type>"
-	And User calls "deleteIssueAPI" with "InvalidAccessToken"
+	Given User calls "deleteIssueAPI" with "InvalidAccessToken"
 	And API call failed "message" equals "401 Unauthorized"
 	And User calls "deleteIssueAPI" with "ExpiredAccessToken"
 	And API call failed "error" equals "invalid_token"
@@ -32,6 +31,3 @@ Scenario Outline: EdgeCases on Issue API
 	And User calls "newIssueAPI" without mandatory fields
 	And User calls "editIssueAPI" without mandatory fields
 	
-Examples:
-	|title 							|description 						 |assigneeId |labels 				 |type			|
-	|New Issue title 3  |New Issue3 description  |891234 		 |regression		 |issue  		|
