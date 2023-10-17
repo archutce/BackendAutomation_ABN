@@ -1,0 +1,91 @@
+Request method:	DELETE
+Request URI:	https://gitlab.com/api/v4/projects/51190657/issues/64
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	projectId=51190657
+				issueId=64
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 401 Unauthorized
+Date: Tue, 17 Oct 2023 01:20:21 GMT
+Content-Type: application/json
+Content-Length: 30
+Connection: keep-alive
+cache-control: no-cache
+content-security-policy: default-src 'none'
+vary: Origin
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-gitlab-meta: {"correlation_id":"e3992eb991f5a3c98479ed76517e4c47","version":"1"}
+x-request-id: e3992eb991f5a3c98479ed76517e4c47
+x-runtime: 0.023610
+strict-transport-security: max-age=31536000
+referrer-policy: strict-origin-when-cross-origin
+ratelimit-observed: 3
+ratelimit-remaining: 1997
+ratelimit-reset: 1697505681
+ratelimit-resettime: Tue, 17 Oct 2023 01:21:21 GMT
+ratelimit-limit: 2000
+gitlab-lb: haproxy-main-10-lb-gprd
+gitlab-sv: localhost
+CF-Cache-Status: DYNAMIC
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=K6Zw9XktzYgQRcNRrrswpbbcRjQ%2FH2K%2FCy9IZV560tsmF%2BT8ZE44GRZfFPVyS166zedd6pi730q0D5Auhzj1PKjPFWf9KI5XzCL0rQesFxWLtPKd%2BTNt8f%2BTE%2FI%3D"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Set-Cookie: _cfuvid=240zjq2ZX1npMxmE9AG7oq.fzWIwsVF6Abtqg5FnHf0-1697505621453-0-604800000; path=/; domain=.gitlab.com; HttpOnly; Secure; SameSite=None
+Server: cloudflare
+CF-RAY: 8174b7f53d2f0c71-AMS
+
+{
+    "message": "401 Unauthorized"
+}
+Request method:	DELETE
+Request URI:	https://gitlab.com/api/v4/projects/51190657/issues/64
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	projectId=51190657
+				issueId=64
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 401 Unauthorized
+Date: Tue, 17 Oct 2023 01:20:21 GMT
+Content-Type: application/json
+Content-Length: 118
+Connection: keep-alive
+cache-control: no-cache
+content-security-policy: default-src 'none'
+vary: Origin
+www-authenticate: Bearer realm="Protected by OAuth 2.0", error="invalid_token", error_description="Token is expired. You can either do re-authorization or token refresh."
+x-gitlab-meta: {"correlation_id":"f3114886f8d073c174dfb3f1f2b7340b","version":"1"}
+x-request-id: f3114886f8d073c174dfb3f1f2b7340b
+x-runtime: 0.038149
+strict-transport-security: max-age=31536000
+referrer-policy: strict-origin-when-cross-origin
+ratelimit-observed: 4
+ratelimit-remaining: 1996
+ratelimit-reset: 1697505681
+ratelimit-resettime: Tue, 17 Oct 2023 01:21:21 GMT
+ratelimit-limit: 2000
+gitlab-lb: haproxy-main-26-lb-gprd
+gitlab-sv: localhost
+CF-Cache-Status: DYNAMIC
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=gauSWq0yOvspfECABmlViiZu4d2ASnABs4ksIvbJqsGR%2F3%2F6SAB%2FXG8rM6nEGktD3BoHZF3KL3OK94aLh%2FttiePmSI9VVHo50Lr7ettBaDpQXKXY%2BDQZU%2B%2F%2FPzY%3D"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Content-Type-Options: nosniff
+Set-Cookie: _cfuvid=xV3a82SLLIl33qwMc5I4KIKqaLaNm9.fk85Dc66SHrU-1697505621860-0-604800000; path=/; domain=.gitlab.com; HttpOnly; Secure; SameSite=None
+Server: cloudflare
+CF-RAY: 8174b7f7ab80b764-AMS
+
+{
+    "error": "invalid_token",
+    "error_description": "Token is expired. You can either do re-authorization or token refresh."
+}
