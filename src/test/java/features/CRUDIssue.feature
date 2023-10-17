@@ -31,3 +31,4 @@ Scenario Outline: EdgeCases on Issue API
 	And User calls "newIssueAPI" without mandatory fields
 	And User calls "editIssueAPI" without mandatory fields
 	
+

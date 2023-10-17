@@ -21,6 +21,8 @@ public class DataDriven {
 	int column = 0;
 	int k = 0;
 	private static Logger log=LogManager.getLogger(DataDriven.class.getName());
+	
+	//Read data from excel
 
 	public ArrayList<Object> getDataFromExcel(String sheetName, String testCaseName) throws IOException {
 

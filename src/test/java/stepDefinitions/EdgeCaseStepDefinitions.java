@@ -1,17 +1,11 @@
 package stepDefinitions;
 import static org.junit.Assert.*;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 import java.util.stream.Stream;
-
 import static io.restassured.RestAssured.given;
-
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import testUtils.ResuableTestUtils;
@@ -27,7 +21,6 @@ public class EdgeCaseStepDefinitions extends ResuableTestUtils {
 	Response actualCreateResponse,actualGetResponse,actualEditResponse,actualDeleteResponse;
 	String createIssueResponse, getIssueResponse,editIssueResponse,deleteIssueResponse;
 	JsonPath js;
-
 	String id;
 
 	HashMap<String, Object> deleteMap;
@@ -36,7 +29,6 @@ public class EdgeCaseStepDefinitions extends ResuableTestUtils {
 	TestDataBuild data = new TestDataBuild();
 	private static Logger log=LogManager.getLogger(EdgeCaseStepDefinitions.class.getName());
 	ObjectMapper objectMapper = new ObjectMapper();
-	
 	
 	//validate invalid Token,expired Token, invalid Issue ID
 	
@@ -85,7 +77,7 @@ public class EdgeCaseStepDefinitions extends ResuableTestUtils {
 	  
 	}
 	
-	  
+	  //validating error response
 	  @Given("API call failed {string} equals {string}")
 	  public void api_call_failed_equals(String key, String value) {
 	      assertEquals(deleteMap.get(key),value);
@@ -126,7 +118,7 @@ public class EdgeCaseStepDefinitions extends ResuableTestUtils {
 	    	log.info("edit Issue Error Response"+editIssueResponse);
 	    	js=rawToJson(editIssueResponse);
 	    	
-	    	//Conver JSON response as String and get the parameters needed using streams
+	    	//Convert JSON response as String and get the parameters needed using streams
 	    	
 	    	String errorMessage=js.getString("error");
 	    	log.info("edit Issue Error message"+errorMessage);

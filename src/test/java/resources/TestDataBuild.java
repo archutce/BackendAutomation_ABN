@@ -21,7 +21,7 @@ public class TestDataBuild {
 
 
 	
-	//using POJO
+	//using POJO to create new Issue
 	public NewIssueRequest newIssuePayload(String title, String description, String assigneeId, String labels, String type) {
 		NewIssueRequest newIssue=new NewIssueRequest();
 		newIssue.setTitle(title);
@@ -32,7 +32,7 @@ public class TestDataBuild {
 		return newIssue;
 	}
 	
-	//using hashmap along with data driven from excel
+	//using hashmap along with data driven from excel to edit the issue
 	public HashMap<String, Object> editIssuePayload() throws IOException {
 		HashMap<String,Object> editIssueMap= new HashMap<>();
 		testCaseName = "EditIssueAPI";
@@ -47,22 +47,8 @@ public class TestDataBuild {
 		return editIssueMap;
 			
 	} 
-	
-	public HashMap<String, Object> newIssuePayloadMap() throws IOException {
-		HashMap<String,Object> newIssueMap= new HashMap<>();
-		testCaseName = "NewIssueAPI";
-		DataDriven d=new DataDriven();
-		ArrayList<Object> dataValue=d.getDataFromExcel(sheetname, testCaseName);
-		
-		newIssueMap.put("title", dataValue.get(1));
-		newIssueMap.put("description", dataValue.get(2));
-		newIssueMap.put("assigneeId", dataValue.get(3));
-		newIssueMap.put("labels", dataValue.get(4));
-		newIssueMap.put("type", dataValue.get(5));
-		return newIssueMap;
-			
-	} 
-	
+
+	//empty request body
 	public String mandatoryRequest() {		
 		return "";
 		
